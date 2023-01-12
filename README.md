@@ -1,2 +1,10 @@
 # Converting-array-like-objects
-Converting array like objects using array.from() method
+
+const arrayLike = {
+ 0: 'Value 0',
+ 1: 'Value 1',
+ length: 2
+};
+arrayLike.forEach(value => {/* Do something */}); // Errors
+const realArray = Array.from(arrayLike);
+realArray.forEach(value => {/* Do something */}); // Works
